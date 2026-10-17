@@ -1,11 +1,11 @@
 :root {
-  --ink: #17202c;
-  --muted: #5f6570;
-  --paper: #f7f5ef;
-  --paper-light: #fffefa;
-  --line: #d8d4ca;
-  --accent: #8a4055;
-  --link: #253f73;
+  --ink: #222;
+  --muted: #666;
+  --paper: #fff;
+  --paper-light: #f7f7f7;
+  --line: #ddd;
+  --accent: #555;
+  --link: #0645ad;
   --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
   --sans: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
@@ -61,7 +61,7 @@ a:focus-visible { color: var(--accent); }
 }
 
 .header-inner {
-  min-height: 66px;
+  min-height: 58px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -70,8 +70,7 @@ a:focus-visible { color: var(--accent); }
 
 .site-title {
   color: var(--ink);
-  font-family: var(--serif);
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 600;
   text-decoration: none;
 }
@@ -87,21 +86,17 @@ nav {
 nav a { color: var(--muted); }
 
 .intro {
-  min-height: 470px;
-  padding-block: clamp(3.5rem, 7vw, 5.5rem);
-  display: grid;
-  grid-template-columns: minmax(0, 1.55fr) minmax(220px, 0.45fr);
-  align-items: center;
-  gap: clamp(2.5rem, 6vw, 4.5rem);
+  min-height: 0;
+  padding-block: clamp(2.8rem, 6vw, 4rem);
 }
 
-.kicker,
+.intro-copy { max-width: 760px; }
+
 .section-label {
   margin: 0;
-  color: var(--accent);
-  font: 600 0.78rem/1.4 var(--mono);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 600;
 }
 
 h1,
@@ -109,86 +104,59 @@ h2,
 h3 {
   font-family: var(--serif);
   font-weight: 400;
-  letter-spacing: -0.035em;
+  letter-spacing: -0.015em;
 }
 
 h1 {
   max-width: 760px;
-  margin: 1rem 0 0;
-  font-size: clamp(2.9rem, 5.4vw, 4.6rem);
-  line-height: 1.01;
+  margin: 0;
+  font-size: clamp(2.25rem, 4.5vw, 3.25rem);
+  line-height: 1.1;
 }
 
 h2 {
-  margin: 0 0 1.5rem;
-  font-size: clamp(2rem, 4vw, 3.15rem);
-  line-height: 1.08;
-}
-
-.subtitle {
-  margin: 1.35rem 0 0;
-  color: var(--muted);
-  font-family: var(--serif);
-  font-size: clamp(1.15rem, 2.5vw, 1.55rem);
-  font-style: italic;
+  margin: 0 0 1.25rem;
+  font-size: clamp(1.5rem, 2.8vw, 2.05rem);
+  line-height: 1.2;
 }
 
 .author {
-  margin: 0.7rem 0 0;
+  margin: 0.75rem 0 0;
   font-size: 0.92rem;
-  font-weight: 600;
+}
+
+.summary {
+  max-width: 700px;
+  margin: 1.5rem 0 0;
+  color: #333;
+  font-size: 1.05rem;
 }
 
 .primary-links {
-  margin-top: 2rem;
-  display: grid;
-  justify-items: start;
-  gap: 0.55rem;
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 1.25rem;
   font-size: 0.9rem;
 }
 
 .companion-link {
   max-width: 590px;
-  margin: 1.4rem 0 0;
+  margin: 1.2rem 0 0;
   color: var(--muted);
-  font-family: var(--serif);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 
 .companion-link span {
-  margin-right: 0.45rem;
-  color: var(--accent);
-  font: 600 0.7rem/1.4 var(--mono);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  color: var(--ink);
+  font-weight: 600;
 }
-
-.network-figure {
-  width: min(100%, 300px);
-  margin: 0;
-  justify-self: end;
-}
-
-.network-figure svg {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.network-figure .edges {
-  fill: none;
-  stroke: #a6a5a0;
-  stroke-width: 1.2;
-}
-
-.network-figure .stars { fill: var(--ink); }
-.network-figure .accent-star { fill: var(--accent); }
 
 .section {
-  padding-block: clamp(3.5rem, 7vw, 6rem);
+  padding-block: clamp(2.5rem, 5vw, 3.75rem);
   display: grid;
-  grid-template-columns: 150px minmax(0, 1fr);
-  gap: clamp(2rem, 7vw, 6rem);
+  grid-template-columns: 130px minmax(0, 1fr);
+  gap: clamp(1.5rem, 5vw, 3.5rem);
   border-top: 1px solid var(--line);
 }
 
@@ -196,13 +164,13 @@ h2 {
 
 .section-body p {
   margin: 0 0 1rem;
-  color: #414852;
+  color: #333;
 }
 
 .section-body .lead {
   color: var(--ink);
   font-family: var(--serif);
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   line-height: 1.55;
 }
 
@@ -381,15 +349,7 @@ h2 {
   nav { justify-content: flex-start; }
 
   .intro {
-    min-height: 0;
-    padding-block: 4rem;
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
-
-  .network-figure {
-    max-width: 340px;
-    justify-self: end;
+    padding-block: 2.75rem;
   }
 
   .section {

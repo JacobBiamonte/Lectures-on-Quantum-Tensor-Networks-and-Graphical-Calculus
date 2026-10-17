@@ -4,8 +4,8 @@ Buildless static project page for GitHub Pages.
 
 ## Files
 
-- `index.html` — semantic page content and the restrained star-node network sketch
-- `styles.css` — responsive academic layout
+- `index.html` — semantic page content
+- `styles.css` — restrained, responsive academic layout
 - `LICENSE.md` — copyright and open-license scope
 - `.nojekyll` — prevents Jekyll processing on GitHub Pages
 
