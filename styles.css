@@ -254,11 +254,6 @@ cite,
   color: var(--ink) !important;
 }
 
-.reference-note {
-  margin: 0 !important;
-  color: var(--muted) !important;
-}
-
 .source-links {
   margin: 1.5rem 0 0;
   padding-left: 1.1rem;
