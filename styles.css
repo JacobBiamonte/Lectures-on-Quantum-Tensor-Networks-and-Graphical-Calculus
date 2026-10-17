@@ -3,7 +3,6 @@
   --muted: #666;
   --paper: #fff;
   --paper-light: #f7f7f7;
-  --line: #ddd;
   --accent: #555;
   --link: #0645ad;
   --sans: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -54,7 +53,6 @@ a:focus-visible { color: var(--accent); }
 .skip-link:focus { transform: none; }
 
 .site-header {
-  border-bottom: 1px solid var(--line);
   background: var(--paper-light);
 }
 
@@ -149,7 +147,6 @@ cite,
 
 .section {
   padding-block: clamp(2.5rem, 5vw, 3.75rem);
-  border-top: 1px solid var(--line);
 }
 
 .section-body { max-width: 760px; }
@@ -167,13 +164,13 @@ cite,
 
 .facts {
   margin: 0;
-  border-top: 1px solid var(--line);
 }
 
 .facts div {
-  padding: 1rem 0;
-  border-bottom: 1px solid var(--line);
+  padding: 0.45rem 0;
 }
+
+.facts div + div { margin-top: 0.75rem; }
 
 .facts dt {
   margin-bottom: 0.2rem;
@@ -190,13 +187,13 @@ cite,
 
 .reading-list {
   margin: 0;
-  border-top: 1px solid var(--line);
 }
 
 .reading-list article {
-  padding: 1.2rem 0;
-  border-bottom: 1px solid var(--line);
+  padding: 0.35rem 0;
 }
+
+.reading-list article + article { margin-top: 1.5rem; }
 
 .reading-list h3 {
   margin: 0 0 0.35rem;
@@ -217,14 +214,12 @@ cite,
   margin: 0;
   padding: 0;
   list-style: none;
-  border-top: 1px solid var(--line);
 }
 
 .contents-list li {
-  padding: 0.75rem 0;
+  padding: 0.3rem 0;
   display: flex;
   gap: 0.75rem;
-  border-bottom: 1px solid var(--line);
 }
 
 .contents-list span {
@@ -248,12 +243,10 @@ cite,
 .reference-list {
   margin: 2rem 0 0;
   padding-left: 1.5rem;
-  border-top: 1px solid var(--line);
 }
 
 .reference-list li {
-  padding: 1rem 0 1rem 0.25rem;
-  border-bottom: 1px solid var(--line);
+  padding: 0.65rem 0 0.65rem 0.25rem;
 }
 
 .reference-citation {
@@ -277,7 +270,6 @@ cite,
   padding-block: 2rem;
   color: var(--muted);
   background: var(--paper-light);
-  border-top: 1px solid var(--line);
 }
 
 .footer-inner {
