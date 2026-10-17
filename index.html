@@ -3,308 +3,177 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#101826">
+    <meta name="theme-color" content="#f7f5ef">
     <meta
       name="description"
-      content="Lectures on Quantum Tensor Networks by Jacob Biamonte: a pathway to modern diagrammatic reasoning."
+      content="Lectures on Quantum Tensor Networks by Jacob Biamonte — current source, archived versions, contents, and project dates."
     >
     <meta property="og:type" content="website">
     <meta property="og:title" content="Lectures on Quantum Tensor Networks">
-    <meta
-      property="og:description"
-      content="A pathway to modern diagrammatic reasoning — a living source project by Jacob Biamonte."
-    >
+    <meta property="og:description" content="A pathway to modern diagrammatic reasoning, by Jacob Biamonte.">
+    <link rel="canonical" href="https://jacobbiamonte.github.io/Lectures-on-Quantum-Tensor-Networks-and-Graphical-Calculus/">
+    <meta name="citation_title" content="Lectures on Quantum Tensor Networks">
+    <meta name="citation_author" content="Biamonte, Jacob">
+    <meta name="citation_date" content="2019/12/20">
+    <meta name="citation_arxiv_id" content="1912.10049">
+    <meta name="citation_doi" content="10.48550/arXiv.1912.10049">
     <title>Lectures on Quantum Tensor Networks — Jacob Biamonte</title>
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%23101826'/%3E%3Cpath d='M14 18L32 11l18 10-3 24-18 8-17-13z' fill='none' stroke='%23f7f3ea' stroke-width='4'/%3E%3Ccircle cx='32' cy='11' r='5' fill='%23f07a4a'/%3E%3Ccircle cx='47' cy='45' r='5' fill='%238da9ff'/%3E%3C/svg%3E">
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
 
-    <header class="site-header" data-header>
-      <div class="header-inner">
-        <a class="wordmark" href="#top" aria-label="Lectures on Quantum Tensor Networks — home">
-          <svg class="wordmark-mark" viewBox="0 0 44 44" role="img" aria-label="Abstract connected tensor mark">
-            <path d="M6 12 22 5l16 9-3 20-15 6L5 30Z" />
-            <circle cx="22" cy="5" r="3.25" />
-            <circle cx="35" cy="34" r="3.25" />
-          </svg>
-          <span><strong>Tensor Networks</strong><small>Lecture project</small></span>
-        </a>
-
-        <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-navigation">
-          <span class="menu-button-label">Menu</span>
-          <span class="menu-button-icon" aria-hidden="true"><i></i><i></i></span>
-        </button>
-
-        <nav class="site-nav" id="site-navigation" aria-label="Primary navigation">
-          <a href="#purpose">Purpose</a>
-          <a href="#route">Lecture route</a>
-          <a href="#project">Project status</a>
-          <a
-            class="nav-source"
-            href="https://github.com/JacobBiamonte/Lectures-on-Quantum-Tensor-Networks-and-Graphical-Calculus"
-            target="_blank"
-            rel="noreferrer"
-          >Source <span aria-hidden="true">↗</span></a>
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="site-title" href="#top">Lectures on Quantum Tensor Networks</a>
+        <nav aria-label="Primary navigation">
+          <a href="#versions">Versions</a>
+          <a href="#about">About</a>
+          <a href="#contents">Contents</a>
+          <a href="#license">License</a>
         </nav>
       </div>
     </header>
 
     <main id="main">
-      <section class="hero" id="top" aria-labelledby="hero-title">
-        <div class="hero-glow hero-glow-one" aria-hidden="true"></div>
-        <div class="hero-glow hero-glow-two" aria-hidden="true"></div>
+      <section class="intro shell" id="top" aria-labelledby="page-title">
+        <div class="intro-copy">
+          <p class="kicker">Open lecture notes · Quantum information</p>
+          <h1 id="page-title">Lectures on<br>Quantum Tensor Networks</h1>
+          <p class="subtitle">a pathway to modern diagrammatic reasoning</p>
+          <p class="author">Jacob Biamonte</p>
 
-        <div class="hero-inner">
-          <div class="hero-copy reveal">
-            <p class="eyebrow"><span></span> Open lectures · Quantum information</p>
-            <h1 id="hero-title">Lectures on<br><em>Quantum Tensor Networks</em></h1>
-            <p class="hero-subtitle">A pathway to modern diagrammatic reasoning.</p>
-            <p class="hero-intro">
-              Foundations, graphical notation, and applications of tensor networks across quantum
-              information—developed from years of teaching and organized as a self-contained route
-              from tensors to contraction.
-            </p>
-
-            <div class="hero-actions" aria-label="Project links">
-              <a class="button button-primary" href="https://arxiv.org/abs/1912.10049" target="_blank" rel="noreferrer">
-                Read the archived edition <span aria-hidden="true">↗</span>
-              </a>
-              <a
-                class="button button-secondary"
-                href="https://github.com/JacobBiamonte/Lectures-on-Quantum-Tensor-Networks-and-Graphical-Calculus"
-                target="_blank"
-                rel="noreferrer"
-              >Explore the source <span aria-hidden="true">→</span></a>
-            </div>
-
-            <div class="hero-credit">
-              <span>By <strong>Jacob Biamonte</strong></span>
-              <span class="credit-rule" aria-hidden="true"></span>
-              <span>arXiv:1912.10049</span>
-            </div>
-          </div>
-
-          <div class="hero-visual reveal" aria-label="Decorative abstract network of connected nodes">
-            <div class="network-frame">
-              <div class="network-label network-label-top"><span>01</span> multilinear maps</div>
-              <div class="network-label network-label-bottom"><span>07</span> tensor contraction</div>
-              <svg class="network-art" viewBox="0 0 680 680" role="img" aria-labelledby="network-title network-desc">
-                <title id="network-title">Abstract tensor-network composition</title>
-                <desc id="network-desc">Decorative boxes and nodes connected by curved lines.</desc>
-                <defs>
-                  <linearGradient id="wire-gradient" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0" stop-color="#f2b987" />
-                    <stop offset="0.48" stop-color="#f7f3ea" />
-                    <stop offset="1" stop-color="#8da9ff" />
-                  </linearGradient>
-                  <radialGradient id="node-coral">
-                    <stop offset="0" stop-color="#ffd7bb" />
-                    <stop offset="1" stop-color="#ee7247" />
-                  </radialGradient>
-                  <radialGradient id="node-blue">
-                    <stop offset="0" stop-color="#dbe4ff" />
-                    <stop offset="1" stop-color="#7795f1" />
-                  </radialGradient>
-                  <filter id="soft-glow" x="-60%" y="-60%" width="220%" height="220%">
-                    <feGaussianBlur stdDeviation="7" result="blur" />
-                    <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
-                  </filter>
-                </defs>
-
-                <g class="network-grid" aria-hidden="true">
-                  <path d="M90 50V630M190 50V630M290 50V630M390 50V630M490 50V630M590 50V630" />
-                  <path d="M50 90H630M50 190H630M50 290H630M50 390H630M50 490H630M50 590H630" />
-                </g>
-
-                <g class="network-wires" fill="none" stroke="url(#wire-gradient)">
-                  <path d="M75 343C142 343 147 223 223 223S302 340 365 340 448 218 535 218 586 153 637 153" />
-                  <path d="M222 222C222 300 221 387 295 387S405 480 405 555" />
-                  <path d="M365 340C365 419 486 395 486 481S561 580 638 580" />
-                  <path d="M75 515C164 515 138 430 221 430" />
-                  <path d="M535 218C535 303 613 310 637 310" />
-                  <path d="M295 387C295 462 225 506 225 593" />
-                </g>
-
-                <g class="network-nodes" filter="url(#soft-glow)">
-                  <rect x="188" y="189" width="68" height="68" rx="13" fill="#f7f3ea" />
-                  <rect x="330" y="305" width="70" height="70" rx="35" fill="url(#node-coral)" />
-                  <rect x="499" y="182" width="72" height="72" rx="14" fill="url(#node-blue)" />
-                  <rect x="261" y="353" width="68" height="68" rx="13" fill="#f7f3ea" />
-                  <rect x="453" y="448" width="66" height="66" rx="33" fill="#f7f3ea" />
-                  <circle cx="75" cy="343" r="10" fill="#ee7247" />
-                  <circle cx="75" cy="515" r="10" fill="#8da9ff" />
-                  <circle cx="637" cy="153" r="10" fill="#f7f3ea" />
-                  <circle cx="637" cy="310" r="10" fill="#ee7247" />
-                  <circle cx="638" cy="580" r="10" fill="#8da9ff" />
-                  <circle cx="405" cy="555" r="10" fill="#f7f3ea" />
-                  <circle cx="225" cy="593" r="10" fill="#f7f3ea" />
-                </g>
-              </svg>
-              <p class="network-caption">An abstract study in nodes, wires, and composition.</p>
-            </div>
-          </div>
-        </div>
-
-        <a class="hero-scroll" href="#purpose"><span>Follow the route</span><i aria-hidden="true"></i></a>
-      </section>
-
-      <section class="purpose section-pad" id="purpose" aria-labelledby="purpose-title">
-        <div class="section-kicker reveal"><span>01</span> Purpose</div>
-        <div class="purpose-grid">
-          <div class="purpose-heading reveal">
-            <h2 id="purpose-title">A common visual language for quantum information.</h2>
-          </div>
-          <div class="purpose-copy reveal">
-            <p class="lead">
-              Tensor-network methods provide tools for understanding multilinear maps. Their
-              graphical language represents states, channels, maps, and processes—bringing several
-              strands of diagrammatic reasoning into one notation.
-            </p>
-            <p>
-              The lectures build from tensor fundamentals and Penrose graphical notation toward
-              matrix product states, Boolean and stabilizer tensors, entanglement invariants, open
-              quantum systems, and counting by contraction. The manuscript is intended to be
-              self-contained and accessible to graduate students, while remaining useful as a
-              research reference.
-            </p>
-          </div>
-        </div>
-
-        <div class="concept-strip reveal" aria-label="Four strands brought together in the lectures">
-          <article><span>i</span><h3>Tensor networks</h3><p>Methods and structures from condensed-matter physics.</p></article>
-          <article><span>ii</span><h3>Quantum circuits</h3><p>Circuit notation and diagrammatic composition.</p></article>
-          <article><span>iii</span><h3>Categorical methods</h3><p>Graphical reasoning for quantum maps and processes.</p></article>
-          <article><span>iv</span><h3>Digital logic</h3><p>Boolean components and their tensor interpretations.</p></article>
-        </div>
-      </section>
-
-      <section class="route section-pad" id="route" aria-labelledby="route-title">
-        <div class="route-backdrop" aria-hidden="true">7</div>
-        <div class="section-kicker section-kicker-light reveal"><span>02</span> Lecture route</div>
-        <div class="route-intro reveal">
-          <h2 id="route-title">Seven parts.<br>One connected path.</h2>
-          <p>
-            The current manuscript moves from the grammar of tensor diagrams to applications of
-            contraction. Each part adds a distinct layer of the formalism.
-          </p>
-        </div>
-
-        <ol class="route-list">
-          <li class="route-item reveal">
-            <div class="route-number">01</div>
-            <div class="route-title"><h3>From Tensors to Networks</h3><span>Foundations</span></div>
-            <p>Penrose graphical notation, wire-bending duality, density operators, worked examples, and problems.</p>
-          </li>
-          <li class="route-item reveal">
-            <div class="route-number">02</div>
-            <div class="route-title"><h3>Matrix Product States</h3><span>Factorization</span></div>
-            <p>The diagrammatic SVD, matrix-product factorization of states, and numerical tensor-network algorithms.</p>
-          </li>
-          <li class="route-item reveal">
-            <div class="route-number">03</div>
-            <div class="route-title"><h3>Boolean Tensor Networks</h3><span>Components</span></div>
-            <p>Tensor-network representations of quantum states, COPY, XOR, and AND tensors, with worked network examples.</p>
-          </li>
-          <li class="route-item reveal">
-            <div class="route-number">04</div>
-            <div class="route-title"><h3>Symmetries &amp; Stabilizer Tensor Theory</h3><span>Structure</span></div>
-            <p>Network symmetries, interacting Boolean tensors, the Clifford group, and Boolean stabilizer states.</p>
-          </li>
-          <li class="route-item reveal">
-            <div class="route-number">05</div>
-            <div class="route-title"><h3>Tensor Networks &amp; Entanglement Invariants</h3><span>Invariants</span></div>
-            <p>Density-operator invariants, symmetries, polynomial invariants, and the route from binary forms to qubit states.</p>
-          </li>
-          <li class="route-item reveal">
-            <div class="route-number">06</div>
-            <div class="route-title"><h3>Tensor Networks for Open Quantum Systems</h3><span>Representations</span></div>
-            <p>Kraus, Stinespring, Liouville-superoperator, Choi-matrix, and process-matrix representations and transformations.</p>
-          </li>
-          <li class="route-item reveal">
-            <div class="route-number">07</div>
-            <div class="route-title"><h3>Counting Solutions by Tensor Contraction</h3><span>Contraction</span></div>
-            <p>Boolean quantum states, stabilizer tensor theory, elementary contraction theorems, and a three-fold way.</p>
-          </li>
-        </ol>
-
-        <div class="appendix-note reveal">
-          <span>Appendix</span>
-          <p>Algebra on quantum states · XOR algebra · Karnaugh minimization · Tensors and tensor products</p>
-        </div>
-      </section>
-
-      <section class="reading section-pad" aria-labelledby="reading-title">
-        <div class="section-kicker reveal"><span>03</span> Ways into the material</div>
-        <div class="reading-head reveal">
-          <h2 id="reading-title">Read linearly.<br>Return selectively.</h2>
-          <p>
-            The lecture sequence supports a first pass through the foundations and later returns to
-            individual constructions, representations, and problem sets.
-          </p>
-        </div>
-        <div class="reading-paths">
-          <article class="reading-path reveal">
-            <div class="path-index">A</div>
-            <div><h3>Build the notation</h3><p>Begin with tensors, networks, graphical notation, duality, and factorization.</p></div>
-            <span class="path-range">Parts 1–2</span>
-          </article>
-          <article class="reading-path reveal">
-            <div class="path-index">B</div>
-            <div><h3>Study the algebra</h3><p>Move through Boolean tensors, symmetries, stabilizer theory, and invariants.</p></div>
-            <span class="path-range">Parts 3–5</span>
-          </article>
-          <article class="reading-path reveal">
-            <div class="path-index">C</div>
-            <div><h3>Follow the applications</h3><p>Compare open-system representations and reason through counting by contraction.</p></div>
-            <span class="path-range">Parts 6–7</span>
-          </article>
-        </div>
-      </section>
-
-      <section class="project section-pad" id="project" aria-labelledby="project-title">
-        <div class="project-orbit" aria-hidden="true"><i></i><i></i><i></i></div>
-        <div class="project-content">
-          <div class="status-pill reveal"><span></span> Living source project</div>
-          <h2 id="project-title" class="reveal">A stable edition.<br>A source that continues to evolve.</h2>
-          <p class="reveal">
-            The arXiv record provides an archived edition of the lectures. The public GitHub
-            repository contains a readable snapshot of the source project. Readers can use the
-            archive for a fixed reference and inspect the repository for the public source.
-          </p>
-          <div class="project-actions reveal">
-            <a class="button button-paper" href="https://arxiv.org/abs/1912.10049" target="_blank" rel="noreferrer">
-              Open arXiv <span aria-hidden="true">↗</span>
+          <div class="primary-links" aria-label="Manuscript links">
+            <a href="https://www.overleaf.com/read/jkccbhcdqwnh" target="_blank" rel="noreferrer">
+              Read or download the current version <span aria-hidden="true">↗</span>
             </a>
-            <a
-              class="text-link"
-              href="https://github.com/JacobBiamonte/Lectures-on-Quantum-Tensor-Networks-and-Graphical-Calculus"
-              target="_blank"
-              rel="noreferrer"
-            >View the public repository <span aria-hidden="true">→</span></a>
+            <a href="https://www.overleaf.com/read/jkccbhcdqwnh" target="_blank" rel="noreferrer">
+              Read the LaTeX source <span aria-hidden="true">↗</span>
+            </a>
+            <a href="https://arxiv.org/abs/1912.10049" target="_blank" rel="noreferrer">
+              Archived arXiv version <span aria-hidden="true">↗</span>
+            </a>
           </div>
+        </div>
+
+        <figure class="network-figure">
+          <svg viewBox="0 0 360 210" role="img" aria-labelledby="network-title network-description">
+            <title id="network-title">A small tensor network drawn as connected stars</title>
+            <desc id="network-description">Seven star-like tensor nodes joined by thin lines.</desc>
+            <g class="edges">
+              <path d="M28 107 91 54 170 83 240 39 328 74" />
+              <path d="M28 107 105 154 170 83 244 157 328 74" />
+              <path d="M105 154 244 157" />
+            </g>
+            <g class="stars">
+              <path d="M28 95l3 9 9 3-9 3-3 9-3-9-9-3 9-3z" />
+              <path d="M91 42l3 9 9 3-9 3-3 9-3-9-9-3 9-3z" />
+              <path d="M170 69l4 10 10 4-10 4-4 10-4-10-10-4 10-4z" />
+              <path d="M240 27l3 9 9 3-9 3-3 9-3-9-9-3 9-3z" />
+              <path d="M328 62l3 9 9 3-9 3-3 9-3-9-9-3 9-3z" />
+              <path d="M105 142l3 9 9 3-9 3-3 9-3-9-9-3 9-3z" />
+              <path class="accent-star" d="M244 143l4 10 10 4-10 4-4 10-4-10-10-4 10-4z" />
+            </g>
+          </svg>
+          <figcaption>Nodes, wires, and composition.</figcaption>
+        </figure>
+      </section>
+
+      <section class="section shell" id="versions" aria-labelledby="versions-title">
+        <div class="section-label">Versions</div>
+        <div class="section-body">
+          <h2 id="versions-title">Public record</h2>
+          <dl class="facts">
+            <div>
+              <dt>20 December 2019</dt>
+              <dd><a href="https://arxiv.org/abs/1912.10049v1" target="_blank" rel="noreferrer">First public release, arXiv v1</a></dd>
+            </div>
+            <div>
+              <dt>4 January 2020</dt>
+              <dd><a href="https://arxiv.org/abs/1912.10049v2" target="_blank" rel="noreferrer">Revised archived version, arXiv v2</a></dd>
+            </div>
+            <div>
+              <dt>Current working version</dt>
+              <dd><a href="https://www.overleaf.com/read/jkccbhcdqwnh" target="_blank" rel="noreferrer">Maintained publicly on Overleaf</a></dd>
+            </div>
+            <div>
+              <dt>17 October 2026</dt>
+              <dd><a href="https://github.com/JacobBiamonte/Lectures-on-Quantum-Tensor-Networks-and-Graphical-Calculus" target="_blank" rel="noreferrer">Public source mirror created on GitHub</a></dd>
+            </div>
+            <div>
+              <dt>Record</dt>
+              <dd>
+                <a href="https://arxiv.org/abs/1912.10049" target="_blank" rel="noreferrer">arXiv:1912.10049</a>
+                ·
+                <a href="https://doi.org/10.48550/arXiv.1912.10049" target="_blank" rel="noreferrer">DOI 10.48550/arXiv.1912.10049</a>
+              </dd>
+            </div>
+          </dl>
+          <p class="note">
+            The arXiv record is the fixed archive. Overleaf carries the author-designated current
+            version and source; GitHub is the public source mirror.
+          </p>
+        </div>
+      </section>
+
+      <section class="section shell" id="about" aria-labelledby="about-title">
+        <div class="section-label">About</div>
+        <div class="section-body">
+          <h2 id="about-title">A diagrammatic language for quantum information.</h2>
+          <p class="lead">
+            These lectures give a self-contained, graduate-accessible route through tensor
+            networks as a language for quantum states, operators, channels, and processes.
+          </p>
+          <p>
+            The manuscript develops tensor notation and graphical reasoning before moving through
+            matrix product states, Boolean and stabilizer tensors, entanglement invariants, open
+            quantum systems, and counting by contraction.
+          </p>
+        </div>
+      </section>
+
+      <section class="section shell" id="contents" aria-labelledby="contents-title">
+        <div class="section-label">Contents</div>
+        <div class="section-body">
+          <h2 id="contents-title">Seven parts</h2>
+          <ol class="contents-list">
+            <li><span>01</span><strong>From Tensors to Networks</strong></li>
+            <li><span>02</span><strong>Matrix Product States</strong></li>
+            <li><span>03</span><strong>Boolean Tensor Networks</strong></li>
+            <li><span>04</span><strong>Symmetries and Stabilizer Tensor Theory</strong></li>
+            <li><span>05</span><strong>Tensor Networks and Entanglement Invariants</strong></li>
+            <li><span>06</span><strong>Tensor Networks for Open Quantum Systems</strong></li>
+            <li><span>07</span><strong>Counting Solutions by Tensor Contraction</strong></li>
+          </ol>
+          <p class="appendix"><span>Appendix</span> Algebra on quantum states, XOR algebra, Karnaugh minimization, and tensor products.</p>
+        </div>
+      </section>
+
+      <section class="section shell" id="license" aria-labelledby="license-title">
+        <div class="section-label">Source &amp; license</div>
+        <div class="section-body">
+          <h2 id="license-title">Open source, copyright retained.</h2>
+          <p>
+            Original lecture text and LaTeX source are copyright © 2019–2026 Jacob Biamonte and
+            licensed under the
+            <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">Creative Commons Attribution 4.0 International License</a>.
+            Reuse is permitted with attribution. Third-party material and the signature image are
+            excluded unless separately identified.
+          </p>
+          <ul class="source-links">
+            <li><a href="https://www.overleaf.com/read/jkccbhcdqwnh" target="_blank" rel="noreferrer">Current manuscript and source on Overleaf</a></li>
+            <li><a href="https://github.com/JacobBiamonte/Lectures-on-Quantum-Tensor-Networks-and-Graphical-Calculus" target="_blank" rel="noreferrer">Public source mirror on GitHub</a></li>
+            <li><a href="https://arxiv.org/abs/1912.10049" target="_blank" rel="noreferrer">Archived manuscript on arXiv</a></li>
+          </ul>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="footer-title">Lectures on<br><em>Quantum Tensor Networks</em></div>
-      <div class="footer-meta">
-        <p>Jacob Biamonte</p>
-        <p>A pathway to modern diagrammatic reasoning.</p>
+      <div class="shell footer-inner">
+        <p><em>Lectures on Quantum Tensor Networks</em><br>Jacob Biamonte</p>
+        <p>First released 2019 · Current source on Overleaf</p>
       </div>
-      <div class="footer-links">
-        <a href="https://arxiv.org/abs/1912.10049" target="_blank" rel="noreferrer">arXiv</a>
-        <a
-          href="https://github.com/JacobBiamonte/Lectures-on-Quantum-Tensor-Networks-and-Graphical-Calculus"
-          target="_blank"
-          rel="noreferrer"
-        >GitHub</a>
-        <a href="#top">Back to top ↑</a>
-      </div>
-      <p class="footer-note">Public project page · <span data-year>2026</span></p>
     </footer>
   </body>
 </html>
