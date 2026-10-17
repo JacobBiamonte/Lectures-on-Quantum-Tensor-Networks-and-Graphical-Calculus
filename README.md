@@ -21,5 +21,6 @@ No package installation or build step is required.
 
 ## Source record
 
-The page identifies the arXiv archive, the author-designated current Overleaf source, and this
-GitHub mirror without treating a repository import date as a manuscript revision date.
+The page identifies the arXiv archive, the author-designated current Overleaf source, this
+GitHub mirror, the concise companion tutorial, and selected primary research foundations. It does
+not treat a repository import date as a manuscript revision date.

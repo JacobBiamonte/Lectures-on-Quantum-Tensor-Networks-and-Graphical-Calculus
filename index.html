@@ -6,11 +6,11 @@
     <meta name="theme-color" content="#f7f5ef">
     <meta
       name="description"
-      content="Lectures on Quantum Tensor Networks by Jacob Biamonte — current source, archived versions, contents, and project dates."
+      content="Lectures on Quantum Tensor Networks by Jacob Biamonte — current source, concise companion, archived versions, and primary research foundations."
     >
     <meta property="og:type" content="website">
     <meta property="og:title" content="Lectures on Quantum Tensor Networks">
-    <meta property="og:description" content="A pathway to modern diagrammatic reasoning, by Jacob Biamonte.">
+    <meta property="og:description" content="Lecture notes, a concise companion tutorial, and the primary research foundations.">
     <link rel="canonical" href="https://jacobbiamonte.github.io/Lectures-on-Quantum-Tensor-Networks-and-Graphical-Calculus/">
     <meta name="citation_title" content="Lectures on Quantum Tensor Networks">
     <meta name="citation_author" content="Biamonte, Jacob">
@@ -27,9 +27,10 @@
       <div class="shell header-inner">
         <a class="site-title" href="#top">Lectures on Quantum Tensor Networks</a>
         <nav aria-label="Primary navigation">
+          <a href="#works">Read together</a>
           <a href="#versions">Versions</a>
-          <a href="#about">About</a>
           <a href="#contents">Contents</a>
+          <a href="#foundations">Foundations</a>
           <a href="#license">License</a>
         </nav>
       </div>
@@ -54,6 +55,12 @@
               Archived arXiv version <span aria-hidden="true">↗</span>
             </a>
           </div>
+
+          <p class="companion-link">
+            <span>Concise companion</span>
+            <a href="https://arxiv.org/abs/1708.00006" target="_blank" rel="noreferrer"><cite>Tensor Networks in a Nutshell</cite></a>,
+            with Ville Bergholm.
+          </p>
         </div>
 
         <figure class="network-figure">
@@ -75,8 +82,38 @@
               <path class="accent-star" d="M244 143l4 10 10 4-10 4-4 10-4-10-10-4 10-4z" />
             </g>
           </svg>
-          <figcaption>Nodes, wires, and composition.</figcaption>
         </figure>
+      </section>
+
+      <section class="section shell" id="works" aria-labelledby="works-title">
+        <div class="section-label">Read together</div>
+        <div class="section-body">
+          <h2 id="works-title">The lectures and their concise companion.</h2>
+          <dl class="reading-list">
+            <div>
+              <dt>Extended treatment</dt>
+              <dd>
+                <h3><cite>Lectures on Quantum Tensor Networks</cite></h3>
+                <p>The full, graduate-level development of the diagrammatic language and its applications.</p>
+                <p class="work-links">
+                  <a href="https://www.overleaf.com/read/jkccbhcdqwnh" target="_blank" rel="noreferrer">Current version</a>
+                  <span aria-hidden="true">·</span>
+                  <a href="https://arxiv.org/abs/1912.10049" target="_blank" rel="noreferrer">arXiv</a>
+                </p>
+              </dd>
+            </div>
+            <div>
+              <dt>Concise companion</dt>
+              <dd>
+                <h3><cite>Tensor Networks in a Nutshell</cite></h3>
+                <p>With Ville Bergholm. A shorter introduction to graphical notation, matrix product states, and counting by tensor contraction.</p>
+                <p class="work-links">
+                  <a href="https://arxiv.org/abs/1708.00006" target="_blank" rel="noreferrer">Read on arXiv</a>
+                </p>
+              </dd>
+            </div>
+          </dl>
+        </div>
       </section>
 
       <section class="section shell" id="versions" aria-labelledby="versions-title">
@@ -146,6 +183,100 @@
             <li><span>07</span><strong>Counting Solutions by Tensor Contraction</strong></li>
           </ol>
           <p class="appendix"><span>Appendix</span> Algebra on quantum states, XOR algebra, Karnaugh minimization, and tensor products.</p>
+        </div>
+      </section>
+
+      <section class="section shell" id="foundations" aria-labelledby="foundations-title">
+        <div class="section-label">Primary foundations</div>
+        <div class="section-body">
+          <h2 id="foundations-title">The research line behind the lectures.</h2>
+          <p class="lead">
+            The programme begins with ground-state spin logic and exact Ising embeddings. Its
+            Boolean tensor-network language is then developed by translating logic gates into
+            tensors and function composition into contraction.
+          </p>
+          <ol class="reference-list">
+            <li>
+              <p class="reference-citation">
+                Jacob D. Biamonte,
+                <a href="https://arxiv.org/abs/0801.3800" target="_blank" rel="noreferrer"><cite>Non-perturbative k-body to two-body commuting conversion Hamiltonians and embedding problem instances into Ising spins</cite></a>,
+                <abbr title="Physical Review A">Phys. Rev. A</abbr> 77, 052331 (2008).
+                <a href="https://doi.org/10.1103/PhysRevA.77.052331" target="_blank" rel="noreferrer">DOI</a>
+              </p>
+              <p class="reference-note">Exact Hamiltonian constructions and Ising embeddings of Boolean problem instances.</p>
+            </li>
+            <li>
+              <p class="reference-citation">
+                James D. Whitfield, Mauro Faccin, and Jacob D. Biamonte,
+                <a href="https://arxiv.org/abs/1205.1742" target="_blank" rel="noreferrer"><cite>Ground-state spin logic</cite></a>,
+                <abbr title="Europhysics Letters">EPL</abbr> 99, 57004 (2012).
+                <a href="https://doi.org/10.1209/0295-5075/99/57004" target="_blank" rel="noreferrer">DOI</a>
+              </p>
+              <p class="reference-note">Boolean truth tables embedded in ground-state subspaces, with gates combined into larger spin-logic constructions.</p>
+            </li>
+            <li>
+              <p class="reference-citation">
+                Yves Lafont,
+                <a href="https://doi.org/10.1016/S0022-4049(03)00069-0" target="_blank" rel="noreferrer"><cite>Towards an algebraic theory of Boolean circuits</cite></a>,
+                <abbr title="Journal of Pure and Applied Algebra">J. Pure Appl. Algebra</abbr> 184, 257–310 (2003).
+              </p>
+              <p class="reference-note">An algebraic and categorical account of Boolean-circuit structure.</p>
+            </li>
+            <li>
+              <p class="reference-citation">
+                Jacob D. Biamonte, Stephen R. Clark, and Dieter Jaksch,
+                <a href="https://arxiv.org/abs/1012.0531" target="_blank" rel="noreferrer"><cite>Categorical Tensor Network States</cite></a>,
+                <abbr title="American Institute of Physics Advances">AIP Advances</abbr> 1, 042172 (2011).
+                <a href="https://doi.org/10.1063/1.3672009" target="_blank" rel="noreferrer">DOI</a>
+              </p>
+              <p class="reference-note">The explicit tensor-network step: logic gates become tensors and composition becomes contraction.</p>
+            </li>
+            <li>
+              <p class="reference-citation">
+                Ville Bergholm and Jacob D. Biamonte,
+                <a href="https://arxiv.org/abs/1010.4840" target="_blank" rel="noreferrer"><cite>Categorical Quantum Circuits</cite></a>,
+                <abbr title="Journal of Physics A: Mathematical and Theoretical">J. Phys. A</abbr> 44, 245304 (2011).
+                <a href="https://doi.org/10.1088/1751-8113/44/24/245304" target="_blank" rel="noreferrer">DOI</a>
+              </p>
+              <p class="reference-note">A categorical tensor calculus for finite-dimensional quantum circuits and their graphical rewrite rules.</p>
+            </li>
+            <li>
+              <p class="reference-citation">
+                Jacob Biamonte, Ville Bergholm, and Marco Lanzagorta,
+                <a href="https://arxiv.org/abs/1209.0631" target="_blank" rel="noreferrer"><cite>Tensor Network Methods for Invariant Theory</cite></a>,
+                <abbr title="Journal of Physics A: Mathematical and Theoretical">J. Phys. A</abbr> 46, 475301 (2013).
+                <a href="https://doi.org/10.1088/1751-8113/46/47/475301" target="_blank" rel="noreferrer">DOI</a>
+              </p>
+              <p class="reference-note">The graphical treatment of polynomial invariants used in the lectures’ entanglement-invariants material.</p>
+            </li>
+            <li>
+              <p class="reference-citation">
+                Christopher J. Wood, Jacob D. Biamonte, and David G. Cory,
+                <a href="https://arxiv.org/abs/1111.6950" target="_blank" rel="noreferrer"><cite>Tensor Networks and Graphical Calculus for Open Quantum Systems</cite></a>,
+                <abbr title="Quantum Information and Computation">Quantum Inf. Comput.</abbr> 15, 759–811 (2015).
+                <a href="https://doi.org/10.26421/QIC15.9-10-3" target="_blank" rel="noreferrer">DOI</a>
+              </p>
+              <p class="reference-note">Graphical representations of states, channels, measurements, and open-system processes.</p>
+            </li>
+            <li>
+              <p class="reference-citation">
+                Jacob D. Biamonte, Jason Morton, and Jacob W. Turner,
+                <a href="https://arxiv.org/abs/1405.7375" target="_blank" rel="noreferrer"><cite>Tensor Network Contractions for #SAT</cite></a>,
+                <abbr title="Journal of Statistical Physics">J. Stat. Phys.</abbr> 160, 1389–1404 (2015).
+                <a href="https://doi.org/10.1007/s10955-015-1276-z" target="_blank" rel="noreferrer">DOI</a>
+              </p>
+              <p class="reference-note">Boolean counting problems expressed and evaluated as tensor-network contractions.</p>
+            </li>
+            <li>
+              <p class="reference-citation">
+                Jacob Biamonte and Ville Bergholm,
+                <a href="https://arxiv.org/abs/1708.00006" target="_blank" rel="noreferrer"><cite>Tensor Networks in a Nutshell</cite></a>
+                (2017).
+              </p>
+              <p class="reference-note">The concise companion tutorial to the present lectures.</p>
+            </li>
+          </ol>
+          <p class="note">Selected foundations; the complete bibliography remains in the manuscript.</p>
         </div>
       </section>
 
